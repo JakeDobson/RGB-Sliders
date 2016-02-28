@@ -34,8 +34,7 @@ class ViewController: UIViewController {
         let green = CGFloat(redSlider.value)
         let blue = CGFloat(blueSlider.value)
         
-        colorSquare.backgroundColor = UIColor(red: red, green: green, blue: blue, alpha: 1)
-        
+        colorSquare.backgroundColor = UIColor(red: red, green: green, blue: blue, alpha: 1)        
     }
 
 }
