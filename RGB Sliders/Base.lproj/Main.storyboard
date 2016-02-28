@@ -38,12 +38,17 @@
                                     <action selector="updateBackgroundColor" destination="BYZ-38-t0r" eventType="valueChanged" id="Xf8-Mk-CS4"/>
                                 </connections>
                             </slider>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ynB-Gz-lo9">
+                                <rect key="frame" x="140" y="199" width="40" height="40"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="blueSlider" destination="2bU-W7-e39" id="Hak-6M-sMK"/>
+                        <outlet property="colorSquare" destination="ynB-Gz-lo9" id="Ygs-4H-KgN"/>
                         <outlet property="greenSlider" destination="Qhf-6k-FeX" id="pLx-Nb-a5X"/>
                         <outlet property="redSlider" destination="an3-BB-XCu" id="CNl-cL-f2A"/>
                     </connections>
