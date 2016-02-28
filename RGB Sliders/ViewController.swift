@@ -6,8 +6,6 @@
 //  Copyright © 2016 Jake Dobson. All rights reserved.
 //
 
-//test comment
-
 import UIKit
 
 class ViewController: UIViewController {
@@ -31,7 +29,7 @@ class ViewController: UIViewController {
     
     @IBAction func updateBackgroundColor() {
         let red = CGFloat(redSlider.value)
-        let green = CGFloat(redSlider.value)
+        let green = CGFloat(greenSlider.value)
         let blue = CGFloat(blueSlider.value)
         
         colorSquare.backgroundColor = UIColor(red: red, green: green, blue: blue, alpha: 1)        
