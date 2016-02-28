@@ -35,6 +35,7 @@ class ViewController: UIViewController {
         let blue = CGFloat(blueSlider.value)
         
         view.backgroundColor = UIColor(red: red, green: green, blue: blue, alpha: 1)
+        
     }
 
 }
