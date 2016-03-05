@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="1om-aR-b3F">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="beK-XA-YZf">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
@@ -44,9 +44,9 @@
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hkg-EK-QNt">
                                 <rect key="frame" x="137" y="361" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="Open"/>
                                 <connections>
-                                    <segue destination="Z1C-IP-0bv" kind="show" id="04v-A6-1xY"/>
+                                    <segue destination="Z1C-IP-0bv" kind="show" identifier="segueColor" id="eHM-HQ-rpQ"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -58,17 +58,18 @@
                         <outlet property="blueSlider" destination="2bU-W7-e39" id="Hak-6M-sMK"/>
                         <outlet property="colorSquare" destination="ynB-Gz-lo9" id="Ygs-4H-KgN"/>
                         <outlet property="greenSlider" destination="Qhf-6k-FeX" id="pLx-Nb-a5X"/>
+                        <outlet property="openButton" destination="Hkg-EK-QNt" id="jrT-vM-f06"/>
                         <outlet property="redSlider" destination="an3-BB-XCu" id="CNl-cL-f2A"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1235" y="306"/>
+            <point key="canvasLocation" x="2859" y="306"/>
         </scene>
-        <!--View Controller-->
+        <!--Results View Controller-->
         <scene sceneID="HjT-nf-xd6">
             <objects>
-                <viewController id="Z1C-IP-0bv" sceneMemberID="viewController">
+                <viewController id="Z1C-IP-0bv" customClass="ResultsViewController" customModule="RGB_Sliders" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ZRg-XU-kkL"/>
                         <viewControllerLayoutGuide type="bottom" id="CHz-Tw-Nsm"/>
@@ -82,25 +83,26 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nlG-go-rX7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1605" y="306"/>
+            <point key="canvasLocation" x="3298" y="306"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="jvo-Fp-6Gl">
+        <scene sceneID="BkV-tY-bQM">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="1om-aR-b3F" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="beK-XA-YZf" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="JMm-0n-7uF">
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ce0-1f-Bce">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Fzx-sR-lvZ"/>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="r7A-iy-3HK"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Wfb-aQ-VgE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yvq-3H-blH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="423" y="306"/>
+            <point key="canvasLocation" x="2047" y="306"/>
         </scene>
     </scenes>
 </document>
