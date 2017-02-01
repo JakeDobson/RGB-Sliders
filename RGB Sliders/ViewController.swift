@@ -20,16 +20,16 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        self.colorSquare.layer.borderColor = UIColor.blackColor().CGColor//add CGFloat black border to UIView
-        self.colorSquare.layer.borderWidth = 1//add border width to UIView
+        self.colorSquare.layer.borderColor = UIColor.black.cgColor //add CGFloat black border to UIView
+        self.colorSquare.layer.borderWidth = 1 //add border width to UIView
         
-        // Loading from NSUser Defaults \\
-        let defaults = NSUserDefaults.standardUserDefaults()//reference to shared default objects
+        //Loading from NSUser Defaults\\
+        let defaults = UserDefaults.standard//reference to shared default objects
         
         //extract the numeric value of the three colors and apply them to the sliders
-        self.redSlider.value = defaults.floatForKey("red")
-        self.greenSlider.value = defaults.floatForKey("green")
-        self.blueSlider.value = defaults.floatForKey("blue")
+        self.redSlider.value = defaults.float(forKey: "red")
+        self.greenSlider.value = defaults.float(forKey: "green")
+        self.blueSlider.value = defaults.float(forKey: "blue")
     }
 
     override func didReceiveMemoryWarning() {
@@ -44,19 +44,19 @@ class ViewController: UIViewController {
         
         self.colorSquare.backgroundColor = UIColor(red: red, green: green, blue: blue, alpha: 1)
         
-        let defaults = NSUserDefaults.standardUserDefaults()//store a reference to the shared defaults object using the standardUserDefaults() method (where you store all user preferences)
+        let defaults = UserDefaults.standard//store a reference to the shared defaults object using the standardUserDefaults() method (where you store all user preferences)
         
         // store the three slider values within the shared defaults object
-        defaults.setFloat(self.redSlider.value, forKey: "red")
-        defaults.setFloat(self.greenSlider.value, forKey: "green")
-        defaults.setFloat(self.blueSlider.value, forKey: "blue")
+        defaults.set(self.redSlider.value, forKey: "red")
+        defaults.set(self.greenSlider.value, forKey: "green")
+        defaults.set(self.blueSlider.value, forKey: "blue")
         
         defaults.synchronize()//To be sure that the data is saved immediately
     }
     // opening 2nd view controller with background of colorSquare
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if (segue.identifier == "segueColor") {
-            if let ResultsViewController = segue.destinationViewController as? ResultsViewController {
+            if let ResultsViewController = segue.destination as? ResultsViewController {
                 ResultsViewController.view.backgroundColor = self.colorSquare.backgroundColor
             }
         }
